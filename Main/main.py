@@ -52,18 +52,9 @@ def check_sequences(arr, x, y, color):
 
     while i < x:
         while j < y:
-            if j+1 < y and arr[i][j] == color and arr[i][j] == arr[i][j+1]:
+            if arr[i][j] == color:
                 false_arr[i][j] = 1
-                false_arr[i][j+1] = 1
-            elif i+1 < x and arr[i][j] == color and arr[i][j] == arr[i+1][j]:
-                false_arr[i][j] = 1
-                false_arr[i+1][j] = 1
-            elif i-1 > 0 and arr[i][j] == color and arr[i][j] == arr[i-1][j]:
-                false_arr[i][j] = 1
-                false_arr[i-1][j] = 1
-            elif j-1 > 0 and arr[i][j] == color and arr[i][j] == arr[i][j-1]:
-                false_arr[i][j] = 1
-                false_arr[i][j-1] = 1
+
             j += 1
         j = 0
         i += 1
@@ -131,3 +122,4 @@ def get_false_arr(arr):
 
 
 main()
+
